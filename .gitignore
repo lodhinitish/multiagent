@@ -1,0 +1,10 @@
+.env
+.DS_Store
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.idea/
+agents.json
+http_tools.json
+loans.json
+users.json

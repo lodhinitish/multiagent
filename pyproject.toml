@@ -1,0 +1,25 @@
+[project]
+name = "multiagent"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.6", "fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27", "python-dotenv>=1.0", "websockets>=12"]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.40"]
+openai = ["openai>=1.40"]
+all = ["anthropic>=0.40", "openai>=1.40"]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["multiagent*"]
+
+[tool.setuptools.package-data]
+multiagent = ["static/**/*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Studio</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232f6fed'/><circle cx='11' cy='16' r='4' fill='white'/><circle cx='22' cy='10' r='3' fill='white'/><circle cx='22' cy='22' r='3' fill='white'/><path d='M14 14l6-3M14 18l6 3' stroke='white' stroke-width='2'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#/agents">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Agent Studio</span>
+    </a>
+    <nav class="nav">
+      <a href="#/agents" data-nav="agents">Agents</a>
+      <a href="#/tools" data-nav="tools">Tools</a>
+    </nav>
+    <div class="nav-foot">
+      <div class="user-box" id="user-box" hidden>
+        <a href="#/account" data-nav="account" class="user-link" title="Account and users">
+          <span class="user-name" id="user-name"></span><span class="user-role" id="user-role"></span></a>
+        <button class="btn small ghost" id="logout" type="button">Log out</button>
+      </div>
+      <a href="/docs" target="_blank" rel="noopener">API docs ↗</a>
+    </div>
+  </aside>
+  <main id="view" class="view" tabindex="-1"></main>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
